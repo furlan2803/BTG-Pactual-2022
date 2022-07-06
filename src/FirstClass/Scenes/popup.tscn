@@ -1,0 +1,183 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Script/popup2.gd" type="Script" id=1]
+[ext_resource path="res://assets/newemailteste.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Minecraftia-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=1]
+resource_name = "popup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 421, 123 ), Vector2( 600, 200 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Newemailteste:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Newemailteste:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Newemailteste:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.5241, 1.42029 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "aviso"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Newemailteste:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.647059, 0.647059, 0.647059, 1 ), Color( 0.490196, 0.490196, 0.490196, 1 ), Color( 0.278431, 0.278431, 0.278431, 1 ), Color( 0.462745, 0.462745, 0.462745, 1 ), Color( 0.666667, 0.666667, 0.666667, 1 ), Color( 1, 1, 1, 1 ), Color( 0.717647, 0.717647, 0.717647, 1 ), Color( 0.572549, 0.572549, 0.572549, 1 ), Color( 0.403922, 0.403922, 0.403922, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Newemailteste:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.5241, 1.42029 ), Vector2( 1.324, 1.22 ), Vector2( 1.146, 1.042 ), Vector2( 0.993, 0.889 ), Vector2( 1.146, 1.042 ), Vector2( 1.20902, 1.10505 ), Vector2( 1.27203, 1.1681 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.002
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 3.0
+margin_right = -2.55994
+margin_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.277
+anchor_top = 0.333
+anchor_right = 0.755
+anchor_bottom = 0.518
+margin_left = 44.825
+margin_top = -0.0940094
+margin_right = -564.625
+margin_bottom = -132.924
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Any_tasks_active" type="RichTextLabel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.017
+margin_left = 38.0
+margin_top = 14.0
+margin_right = -71.6
+margin_bottom = -30.6046
+rect_scale = Vector2( 1.1, 1.1 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+playback_speed = 2.0
+anims/RESET = SubResource( 2 )
+anims/popup = SubResource( 1 )
+
+[node name="question_button" type="Button" parent="."]
+anchor_left = 0.819
+anchor_top = 0.032
+anchor_right = 0.893
+anchor_bottom = 0.12
+margin_left = -10.225
+margin_top = -6.976
+margin_right = 2.42505
+margin_bottom = 4.84
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="question_button"]
+anims/RESET = SubResource( 4 )
+anims/aviso = SubResource( 5 )
+
+[node name="Newemailteste" type="Sprite" parent="question_button"]
+position = Vector2( 54, 41 )
+scale = Vector2( 1.5241, 1.42029 )
+texture = ExtResource( 2 )
+
+[node name="close_button" type="Button" parent="."]
+visible = false
+anchor_left = 0.728
+anchor_top = 0.256
+anchor_right = 0.781
+anchor_bottom = 0.286
+margin_left = -0.200073
+margin_top = 0.191986
+margin_right = 0.224976
+margin_bottom = 3.65199
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="animation_started" from="Panel/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_started"]
+[connection signal="pressed" from="question_button" to="." method="_on_question_button_pressed"]
+[connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Night_fall.gd" type="Script" id=1]
+[ext_resource path="res://assets/tired.png" type="Texture" id=2]
+
+[node name="Night_fall" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Mapas" type="Sprite" parent="."]
+position = Vector2( 640, 361.898 )
+scale = Vector2( 0.264675, 0.266153 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

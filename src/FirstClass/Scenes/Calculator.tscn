@@ -1,0 +1,302 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Script/Calculator.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Minecraftia-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Calculator_nova.png" type="Texture" id=3]
+[ext_resource path="res://assets/fundo preto.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="Calculator" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="FundoPreto" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="CalculatorNova" type="Sprite" parent="."]
+position = Vector2( 648, 340 )
+scale = Vector2( 2.3432, 2.27219 )
+texture = ExtResource( 3 )
+
+[node name="resultado" type="Label" parent="."]
+pause_mode = 2
+margin_left = 508.0
+margin_top = 83.0
+margin_right = 795.0
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_1" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = -23.0
+margin_top = 144.0
+margin_right = 60.0
+margin_bottom = 219.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_2" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 60.0
+margin_top = 146.0
+margin_right = 144.0
+margin_bottom = 222.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_3" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 145.0
+margin_top = 147.0
+margin_right = 222.0
+margin_bottom = 221.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_4" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = -13.0
+margin_top = 228.0
+margin_right = 55.0
+margin_bottom = 293.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_5" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 65.0
+margin_top = 228.0
+margin_right = 136.0
+margin_bottom = 298.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_6" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 146.0
+margin_top = 225.0
+margin_right = 218.0
+margin_bottom = 302.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_7" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = -18.0
+margin_top = 304.0
+margin_right = 58.0
+margin_bottom = 375.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_8" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 65.0
+margin_top = 303.0
+margin_right = 137.0
+margin_bottom = 379.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_9" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 140.0
+margin_top = 304.0
+margin_right = 218.0
+margin_bottom = 375.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_0" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = -18.0
+margin_top = 381.0
+margin_right = 59.0
+margin_bottom = 456.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_ponto" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 60.0
+margin_top = 383.0
+margin_right = 137.0
+margin_bottom = 456.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_x" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 226.0
+margin_top = 227.0
+margin_right = 301.0
+margin_bottom = 296.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_+" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 228.0
+margin_top = 388.0
+margin_right = 303.0
+margin_bottom = 451.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_-" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 229.0
+margin_top = 310.0
+margin_right = 301.0
+margin_bottom = 372.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_div" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 229.0
+margin_top = 148.0
+margin_right = 301.0
+margin_bottom = 215.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_fechar" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = -14.0
+margin_top = 76.0
+margin_right = 51.0
+margin_bottom = 141.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_exp" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 63.0
+margin_top = 73.0
+margin_right = 141.0
+margin_bottom = 139.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_AC" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 144.0
+margin_top = 69.0
+margin_right = 222.0
+margin_bottom = 145.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_=" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 146.0
+margin_top = 389.0
+margin_right = 218.0
+margin_bottom = 451.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_CE" type="Button" parent="resultado"]
+pause_mode = 2
+show_behind_parent = true
+margin_left = 226.0
+margin_top = 72.0
+margin_right = 299.0
+margin_bottom = 141.0
+flat = true
+
+[connection signal="pressed" from="resultado/Button_1" to="." method="_on_Button_1_pressed"]
+[connection signal="pressed" from="resultado/Button_2" to="." method="_on_Button_2_pressed"]
+[connection signal="pressed" from="resultado/Button_3" to="." method="_on_Button_3_pressed"]
+[connection signal="pressed" from="resultado/Button_4" to="." method="_on_Button_4_pressed"]
+[connection signal="pressed" from="resultado/Button_5" to="." method="_on_Button_5_pressed"]
+[connection signal="pressed" from="resultado/Button_6" to="." method="_on_Button_6_pressed"]
+[connection signal="pressed" from="resultado/Button_7" to="." method="_on_Button_7_pressed"]
+[connection signal="pressed" from="resultado/Button_8" to="." method="_on_Button_8_pressed"]
+[connection signal="pressed" from="resultado/Button_9" to="." method="_on_Button_9_pressed"]
+[connection signal="pressed" from="resultado/Button_0" to="." method="_on_Button_0_pressed"]
+[connection signal="pressed" from="resultado/Button_ponto" to="." method="_on_Button_ponto_pressed"]
+[connection signal="pressed" from="resultado/Button_x" to="." method="_on_Button_x_pressed"]
+[connection signal="pressed" from="resultado/Button_+" to="." method="_on_Button_soma_pressed"]
+[connection signal="pressed" from="resultado/Button_-" to="." method="_on_Button_sub_pressed"]
+[connection signal="pressed" from="resultado/Button_div" to="." method="_on_Button_div_pressed"]
+[connection signal="pressed" from="resultado/Button_fechar" to="." method="_on_Button_fechar_pressed"]
+[connection signal="pressed" from="resultado/Button_exp" to="." method="_on_Button_exp_pressed"]
+[connection signal="pressed" from="resultado/Button_AC" to="." method="_on_Button_AC_pressed"]
+[connection signal="pressed" from="resultado/Button_=" to="." method="_on_Button_calcular_pressed"]
+[connection signal="pressed" from="resultado/Button_CE" to="." method="_on_Button_CE_pressed"]

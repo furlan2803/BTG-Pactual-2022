@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Raio.tscn" type="PackedScene" id=1]
+[ext_resource path="res://joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/phone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/popup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Script/energy.gd" type="Script" id=5]
+[ext_resource path="res://Script/money_físico.gd" type="Script" id=6]
+[ext_resource path="res://Fonts/Minecraftia-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Cellphone/Cellphone.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 23
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[node name="Joystick" type="CanvasLayer"]
+script = ExtResource( 5 )
+
+[node name="Controllers" parent="." instance=ExtResource( 2 )]
+position = Vector2( 160, 560 )
+
+[node name="energy_1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 44 )
+
+[node name="energy_2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 98, 44 )
+
+[node name="energy_3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 144, 42 )
+
+[node name="energy_4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, 41 )
+
+[node name="energy_5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 41 )
+
+[node name="energy_6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 41 )
+
+[node name="energy_7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 333, 40 )
+
+[node name="energy_8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 376, 40 )
+
+[node name="Control" parent="." instance=ExtResource( 4 )]
+margin_left = -7.0
+margin_top = 5.0
+margin_right = -6.99988
+margin_bottom = 5.0
+
+[node name="phone" parent="." instance=ExtResource( 3 )]
+margin_left = 1228.0
+margin_top = 62.0
+margin_right = 1240.0
+margin_bottom = 82.0
+
+[node name="money_1" type="RichTextLabel" parent="."]
+anchor_left = 0.669
+anchor_top = 0.033
+anchor_right = 0.781
+anchor_bottom = 0.09
+margin_left = -34.3201
+margin_top = 1.24
+margin_right = 22.3199
+margin_bottom = 1.24
+custom_colors/default_color = Color( 0.360784, 0.976471, 0.32549, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cellphone_open" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="happy" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 489.0
+margin_top = 32.0
+margin_right = 673.0
+margin_bottom = 72.0
+text = "lllllllllllllllllll"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Expense_Notification" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="Expense" type="RichTextLabel" parent="."]
+margin_left = 832.0
+margin_top = 92.0
+margin_right = 1032.0
+margin_bottom = 132.0
+custom_colors/default_color = Color( 0.882353, 0.176471, 0.176471, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 28.0
+margin_top = 92.0
+margin_right = 408.0
+margin_bottom = 349.0
+custom_fonts/normal_font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="Expense_Notification" to="." method="_on_Expense_Notification_timeout"]
